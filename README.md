@@ -17,3 +17,9 @@ A node.js server-side rendered page that displays a sorted list of projected tot
 % node server.js
 Server started on port 3000
 ```
+
+Visit `localhost:3000`
+
+## Example
+
+![Localhost example](./example.png)
