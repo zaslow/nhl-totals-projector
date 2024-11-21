@@ -1,0 +1,12 @@
+{
+  "name": "nhl-totals-projector",
+  "version": "0.1.0",
+  "description": "Script to project totals for daily NHL games",
+  "main": "index.js",
+  "author": "zaslow",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.1",
+    "mustache-express": "^1.3.2"
+  }
+}

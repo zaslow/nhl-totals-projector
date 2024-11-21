@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+    }
+    caption {
+      caption-side: bottom;
+      margin: 1em;
+      text-align: left;
+    }
+    main {
+      background-image: url('https://img.goodfon.com/original/1923x967/d/39/nhl-nhl-hokkey-hockey.jpg');
+      background-position-x: right;
+      background-repeat: no-repeat;
+      background-size: 67% auto;
+      height: 100vh;
+    }
+    span {
+      font-style: italic;
+    }
+    table, th, td {
+      border: 1px solid white;
+      padding: 0.5em;
+    }
+  </style>
+  <title>NHL Totals Projector</title>
+</head>
+<body>
+  <main>
+    <h1>NHL Totals for Today</h1>
+    <table>
+      <caption>
+        Projected total is the sum of the two teams' projected goals,<br />
+        where each of their projected goals are the average of the team's <span>goals for per game (GF/G)</span><br />
+        and their opponent's <span>goals against per game (GA/G)</span>.
+      </caption>
+      <tr>
+        <th>Date</th>
+        <th>Game</th>
+        <th>Projected Away Goals</th>
+        <th>Projected Home Goals</th>
+        <th>Projected Total</th>
+      <tr>
+      {{ #data }}
+      <tr>
+        <td>{{ date }}</td>
+        <td>{{ away.team }} @ {{ home.team }}</td>
+        <td>{{ away.projPoints }}</td>
+        <td>{{ home.projPoints }}</td>
+        <td>{{ projTotal }}</td>
+      </tr>
+      {{ /data }}
+    </table>
+  </main>
+</body>
+</html>
